@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6751" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AssetsViewController">
+            <connections>
+                <outlet property="bottomToolBar" destination="emv-1l-afe" id="UrJ-c2-ubw"/>
+                <outlet property="collectionView" destination="aAX-1j-oab" id="RFX-hs-05E"/>
+                <outlet property="previewButton" destination="vk8-L7-bs5" id="9YC-PR-FkR"/>
+                <outlet property="submitButton" destination="tZC-uQ-dyR" id="zpc-5j-iRh"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="aAX-1j-oab">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="2vV-fd-Qbu">
+                        <size key="itemSize" width="50" height="50"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="50" height="50"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                </collectionView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="emv-1l-afe" customClass="BorderView">
+                    <rect key="frame" x="0.0" y="528" width="320" height="40"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vk8-L7-bs5">
+                            <rect key="frame" x="8" y="4" width="62" height="31"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="31" id="1dp-3u-xqE"/>
+                                <constraint firstAttribute="width" constant="62" id="YJm-c1-cp0"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                            <state key="normal" title="预览" backgroundImage="btn_preview">
+                                <color key="titleColor" red="0.16862745100000001" green="0.16862745100000001" blue="0.16862745100000001" alpha="0.75" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <state key="disabled" backgroundImage="btn_preview_gray">
+                                <color key="titleColor" red="0.16862745100000001" green="0.16862745100000001" blue="0.16862745100000001" alpha="0.75" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                            <state key="highlighted">
+                                <color key="titleColor" red="0.84313725490000002" green="0.0039215686269999999" blue="0.2470588235" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tZC-uQ-dyR">
+                            <rect key="frame" x="250" y="4" width="62" height="31"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="62" id="eCI-oE-2C9"/>
+                                <constraint firstAttribute="height" constant="31" id="t1W-N1-UUZ"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                            <state key="normal" title="确定" backgroundImage="btn_determine">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <state key="disabled" title="确定" backgroundImage="btn_preview_gray"/>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="tZC-uQ-dyR" secondAttribute="bottom" constant="5" id="5Ib-CG-JJK"/>
+                        <constraint firstAttribute="trailing" secondItem="tZC-uQ-dyR" secondAttribute="trailing" constant="8" id="BeA-wq-67j"/>
+                        <constraint firstAttribute="bottom" secondItem="vk8-L7-bs5" secondAttribute="bottom" constant="5" id="Xo5-Pk-c7S"/>
+                        <constraint firstItem="vk8-L7-bs5" firstAttribute="leading" secondItem="emv-1l-afe" secondAttribute="leading" constant="8" id="Y4R-VT-B7A"/>
+                        <constraint firstAttribute="height" constant="40" id="gqQ-xm-cnl"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="showGradient" value="YES"/>
+                        <userDefinedRuntimeAttribute type="rect" keyPath="borderInsets">
+                            <rect key="value" x="1" y="0.0" width="0.0" height="0.0"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="aAX-1j-oab" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="5Dn-U1-GC9"/>
+                <constraint firstAttribute="bottom" secondItem="emv-1l-afe" secondAttribute="bottom" id="5wN-6q-ihn"/>
+                <constraint firstAttribute="trailing" secondItem="emv-1l-afe" secondAttribute="trailing" id="Ect-Ke-fTV"/>
+                <constraint firstAttribute="trailing" secondItem="aAX-1j-oab" secondAttribute="trailing" id="FtC-Tc-yGy"/>
+                <constraint firstItem="emv-1l-afe" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="UPq-Dv-QZ5"/>
+                <constraint firstAttribute="bottom" secondItem="aAX-1j-oab" secondAttribute="bottom" id="rGw-ys-OYP"/>
+                <constraint firstItem="aAX-1j-oab" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="viv-0c-frb"/>
+            </constraints>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+            <point key="canvasLocation" x="145" y="320"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="btn_determine" width="64" height="31"/>
+        <image name="btn_preview" width="64" height="31"/>
+        <image name="btn_preview_gray" width="64" height="31"/>
+    </resources>
+</document>
